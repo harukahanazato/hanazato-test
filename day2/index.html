@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vueのテスト</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a href="http://sailormoon-official.com/" target="_brank">
+        <img src="https://i.pinimg.com/originals/81/dc/01/81dc01b6f0756fdd5a80bd8343149480.png" width="200" alt="セーラームーン">
+      </a>
+      <ul class="navbar-nav mr-auto ml-4 mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Info</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control my-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</header>
+<body>
+  <div class="container">
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="">
+            <img :src="car_img1" class="d-block w-100" alt="sailormoon1">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="">
+            <img :src="car_img2" class="d-block w-100" alt="sailormoon2">
+          </a>
+        </div>
+        <div class="carousel-item">
+          <a href="">
+            <img :src="car_img3" class="d-block w-100" alt="sailormoon3">
+          </a>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <div v-if="show" id='app'>
+      <div class="news">
+        <p class="Headline">
+          <b>お知らせ</b>
+        </p>
+        <p class='news_text1'>
+          <b>YouTubeにて90年代アニメシリーズ無料配信中！</b>
+        </p>
+        <ul class="ews_text2">
+          <li>6/5-6/11 「美少女戦士セーラームーンR」第15話～第24話 <span class="badge badge-pill badge-danger">NEW</a></li>
+          <li>5/29-6/4 「美少女戦士セーラームーンR」第5話～第14話</li>
+          <li>5/22-5/28 「美少女戦士セーラームーン」第41話～第46話 /「美少女戦士セーラームーンR」第1話～第4話</li>
+          <li>5/15-5/21 「美少女戦士セーラームーン」第31話～第40話</li>
+          <li>5/8-5/14 「美少女戦士セーラームーン」第21話～第30話</li>
+          <li>5/1-5/7 「美少女戦士セーラームーン」第11話～第20話</li>
+          <li>4/24-4/30 「美少女戦士セーラームーン」第1話～第10話</li>
+        </ul>
+        <p><b>セーラームーンを観ない子は・・・</b>  
+          <img :src="img_url2" width="120" :alt="img_alt" data-toggle="modal" data-target="#staticBackdrop" type="button">
+        ← クリックしてね</p>
+      </div>
+    </div>
+
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">外部のサイトへ移動します。</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        YouTubeへ接続します。よろしいですか？
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">いいえ</button>
+        <button type="button" onclick="location.href='https://www.youtube.com/user/sailormoonofficialch'" class="btn btn-primary">はい</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="synopsis">
+      <p class="synopsis2">
+        <b>あらすじ</b>
+      </p>
+      <p class="synopsis3">
+        月野うさぎは、ちょっとドジで泣き虫だけど、元気いっぱいの中学2年生の女の子。ある日、額が三日月の言葉をしゃべる黒猫ルナと出会う。<br/>
+        ちょうどその頃、親友なるちゃんのママが経営する宝石店が何者かに襲われる。なるちゃんのピンチを知って駆けつけたうさぎ。<br/>
+        ルナに言われるがままに｢ムーンプリズム・パワー! メイクアップ!! ｣と叫ぶと、セーラームーンに変身! なんと敵を倒してしまう。<br/>
+        うさぎは選ばれた正義の戦士で、仲間の戦士と幻の銀水晶を探し出しプリンセスを守るという使命があるらしい。幻の銀水晶を狙う謎のタキシード仮面も現れて......。
+      </p>
+    </div>
+
+    <section id='blog'>
+      <p class="member">
+        <b>キャラクター</b>
+      </p>
+        <div class="album">
+          <div class="container">
+            <div class="row">
+              <div v-for="item in items" class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                  <img :src="item.img_url" alt="item.img_alt" width="338" height="338">
+                  <div class="card-body">
+                      <p class="card-text">
+                        <span v-html="item.name"></span>
+                      </p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <div class="btn-group">
+                        <button @Click="btnClick" type="button" class="btn btn-sm btn-outline-secondary">about</button>
+                      </div>
+                      <small class="text-muted">第 {{item.appearance}} 話～</small>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    </section>
+  
+    <div class="table">
+      <table class="table-hover">
+        <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">必殺技</th>
+              <th scope="col">説明</th>
+            </tr>
+        </thead>
+        <p class="Ranking">
+          <b>登場キャラクターの必殺技</b>
+        </p>
+        <tbody class="details">
+          <tr>
+            <th scope="row">セーラームーン</th>
+            <td>ムーン・ティアラ・アクション</td>
+            <td>額のティアラを外してブーメランの要領で投げ、物理的に攻撃を加える</td>
+          </tr>
+          <tr>
+            <th scope="row">セーラーマーキュリー</th>
+            <td>シャボン・スプレー</td>
+            <td>攻撃性は低く、殺傷能力はゼロに近いが敵を撹乱させたりバリア機能として使われる</td>
+          </tr>
+          <tr>
+            <th scope="row">セーラーマーズ</th>
+            <td>ファイヤー・ソウル</td>
+            <td>気合いをこめた指先に発生させた火の玉を螺旋状に飛ばし、遠距離の相手にも使えることができる</td>
+          </tr>
+          <tr>
+            <th scope="row">セーラージュピター</th>
+            <td>シュープリーム・サンダー</td>
+            <td>雷雲を頭上に呼び寄せ、全身に溜め込んでから放出し超強力な電撃として相手を打ち砕く</td>
+          </tr>
+          <tr>
+            <th scope="row">セーラーヴィーナス</th>
+            <td>クレッセント・ビーム</td>
+            <td>非常に命中率が高くスピードも速いため敵がよけることは難しいものの、パワーが弱いと言う難点がある</td>
+          </tr>
+          <tr>
+            <th scope="row">タキシード仮面</th>
+            <td>薔薇投げ</td>
+            <td>キザなセリフと薔薇を１輪飛ばし、セーラー戦士のピンチを救うだけ</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  <div class="container" style="margin-top: 30;">
+    <div class="CombatPower1">
+      <p class="power">
+       <b>登場キャラクターの戦闘力</b>
+     </p>
+      <div class="CombatPower2">
+        <p sytle="margin-top: 10px">セーラームーン</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p sytle="margin-top: 10px">セーラーマーキュリー</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 40%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p sytle="margin-top: 10px">セーラーマーズ</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p sytle="margin-top: 10px">セーラージュピター</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p sytle="margin-top: 10px">セーラーヴィーナス</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <p sytle="margin-top: 10px">タキシード仮面</p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="margin-top: 30;">
+    <div class="form-group">
+      <div class="alert alert-info" role="alert">
+        <b>セーラームーンキャラクター総選挙開催中！あなたの好きなキャラクターを応援しよう☆</b>
+      </div>
+      <form>
+        <div class="row">
+          <div class="col">
+            <label for="exampleFormControlInput1">おなまえ</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="月野うさぎ">
+          </div>
+          <div class="col">
+            <label for="exampleFormControlInput1">Eメールアドレス</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+        </div>
+        <label for="exampleFormControlSelect1">好きなキャラクターを選んでね</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option>セーラームーン</option>
+          <option>セーラーマーキュリー</option>
+          <option>セーラーマーズ</option>
+          <option>セーラージュピター</option>
+          <option>セーラーヴィーナス</option>
+          <option>タキシード仮面</option>
+        </select>
+        <label for="exampleFormControlTextarea1">好きなところを教えてね（最大文字数200文字）</label>
+        <textarea type="text" class="form-control" rows="3" v-model="massage" maxlength="200"></textarea>
+        <p>{{massage.length}} / 200</p>
+        <button type="submit" class="btn btn-info" >応援する</button>
+      </form>
+    </div>
+  </div>
+</div>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+      <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">About</a></li>
+      <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">member</a></li>
+    </ol>
+  </nav>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </div>
+</body>
+
+<script>
+    const app = new Vue({
+        el: '.container',
+        data: {
+            url: 'http://sailormoon-official.com/',
+            img_url: 'https://i.pinimg.com/originals/81/dc/01/81dc01b6f0756fdd5a80bd8343149480.png',
+            url2: 'https://www.youtube.com/user/sailormoonofficialch',
+            img_url2: 'https://stickershop.line-scdn.net/stickershop/v1/product/15497/LINEStorePC/main.png;compress=true',
+            img_alt: '美少女戦士セーラームーン',
+            car_img1: 'https://spice.eplus.jp/images/RNO0F3nVyuSZE1SNnvQIOJkRGoeY0xD6vNyNs5eEiOzHVOWcAOzgazIuAG7Iwzdj',
+            car_img2: 'https://i.imgur.com/n6qmv.jpg',
+            car_img3: 'http://www.theotaku.com/submissions/temporary/wallpapers/captions/517562-20100324163027.jpg',
+            show: true,
+            massage: '',
+            items: [
+              {
+                name: '月野 うさぎ<br/>セーラームーン',
+                appearance: 1,
+                img_url: 'https://www.lisani.jp/admin/wp-content/uploads/2014/04/news-1404201500-c002.jpg',
+                img_alt: 'セーラームーン'
+              },
+              {
+                name: '水野 亜美<br/>セーラーマーキュリー',
+                appearance: 8,
+                img_url: 'https://www.lisani.jp/admin/wp-content/uploads/2014/04/news-1404201500-c003.jpg',
+                img_alt: 'セーラーマーキュリー'
+              },
+              {
+                name: '火野 レイ<br/>セーラーマーズ',
+                appearance: 10,
+                img_url: 'https://www.lisani.jp/admin/wp-content/uploads/2014/04/news-1404201500-c004.jpg',
+                img_alt: 'セーラーマーズ'
+              },
+              {
+                name: '木野 まこと<br/>セーラージュピター',
+                appearance: 25,
+                img_url: 'https://www.lisani.jp/admin/wp-content/uploads/2014/04/news-1404201500-c005.jpg',
+                img_alt: 'セーラージュピター'
+              },
+              {
+                name: '愛野 美奈子<br/>セーラーヴィーナス',
+                appearance: 33,
+                img_url: 'https://www.lisani.jp/admin/wp-content/uploads/2014/04/news-1404201500-c006.jpg',
+                img_alt: 'セーラーヴィーナス'
+              },
+              {
+                name: '地場 衛<br/>タキシード仮面',
+                appearance: 1,
+                img_url: 'https://pbs.twimg.com/profile_images/1264736403/mamo_400x400.jpg',
+                img_alt: 'タキシード仮面'
+              }
+            ],
+        },
+        methods: {
+          btnClick() 
+          {
+            console.log('Click!')
+          }
+        }
+    })
+</script>
+
+</html>
