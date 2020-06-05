@@ -1,0 +1,98 @@
+.navbar {
+    background-color: #fdeff2;
+}
+.nav-link {
+    color: #fc6586;
+}
+.carousel {
+    padding: 50px 0px;
+}
+.carousel-item .img-fluid {
+    width:100%;
+    height:600px;
+}
+.carousel-item {
+    height: 600px;
+}
+.carousel-item a {
+    display: block;
+    width:100%;
+}  
+.carousel-item .show-image {
+    display: block;
+    width:100%;
+}
+.news {
+    padding: 50px 0px;
+}
+.Headline {
+    font-size: x-large;
+    color: #fc6586;
+}
+.news_text1 {
+    font-size: 13pt;
+}
+.synopsis {
+    padding-bottom: 50px;
+}
+.synopsis2 {
+    font-size: x-large;
+    color: #fc6586;
+}
+.member {
+    font-size: x-large;
+    color: #fc6586;
+}
+.page-link {
+    color: #fc6586;
+}
+.table table-hover {
+    padding: 50px 0px;
+}
+.col {
+    margin-bottom: 1rem;
+}
+.form-group {
+    padding: 50px 0px;
+}
+.alert {
+    font-size: large;
+}
+.form-control {
+    margin-bottom: 1rem;
+}
+.table {
+    padding: 50px 0px;
+}
+.power {
+    font-size: x-large;
+    color: #fc6586;
+}
+.CombatPower1 {
+    padding: 50px 0px
+}
+.CombatPower2 {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
+.progress {
+    margin-bottom: 1rem;
+}
+.Ranking {
+    font-size: x-large;
+    color: #fc6586;
+}
+.details {
+    font-size: 10pt;
+}
+.confirmbtn {
+    background-color: #fc6586;
+}
+.breadcrumb {
+    background-color: #fdeff2;
+}
+.breadcrumb-link {
+    color: #fc6586;
+}
