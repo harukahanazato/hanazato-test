@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<header>
+<body>
   <nav class="navbar navbar-expand-lg">
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a href="http://sailormoon-official.com/" target="_brank">
@@ -30,8 +30,6 @@
       </form>
     </div>
   </nav>
-</header>
-<body>
   <div class="container">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
@@ -78,7 +76,7 @@
           <li>4/24-4/30 「美少女戦士セーラームーン」第1話～第10話</li>
         </ul>
         <p><b>セーラームーンを観ない子は・・・</b>  
-          <img :src="img_url2" width="120" :alt="img_alt" data-toggle="modal" data-target="#staticBackdrop" type="button">
+          <img :src="img_url2" width="10%" :alt="img_alt" data-toggle="modal" data-target="#staticBackdrop" type="button">
         ← クリックしてね</p>
       </div>
     </div>
@@ -124,7 +122,7 @@
             <div class="row">
               <div v-for="item in items" class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img :src="item.img_url" alt="item.img_alt" width="338" height="338">
+                  <img :src="item.img_url" alt="item.img_alt" height="auto">
                   <div class="card-body">
                       <p class="card-text">
                         <span v-html="item.name"></span>
