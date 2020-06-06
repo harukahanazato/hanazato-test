@@ -28,7 +28,7 @@
 .news_img {
     width: 10%;
     max-width: 10%;
-    min-width: 10px;
+    min-width: 20px;
 }
 .Headline {
     font-size: x-large;
@@ -47,6 +47,11 @@
 .member {
     font-size: x-large;
     color: #fc6586;
+}
+.card_img {
+    height: 320px;
+    max-height: 320px;
+    min-height: 80%;
 }
 .page-link {
     color: #fc6586;

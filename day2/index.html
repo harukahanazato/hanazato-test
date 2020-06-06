@@ -9,26 +9,21 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a href="http://sailormoon-official.com/" target="_brank">
-        <img src="https://i.pinimg.com/originals/81/dc/01/81dc01b6f0756fdd5a80bd8343149480.png" width="200" alt="セーラームーン">
-      </a>
-      <ul class="navbar-nav mr-auto ml-4 mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">News</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Info</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control my-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
+    <a class="navbar-brand" href="http://sailormoon-official.com/" target="_brank"><img src="https://i.pinimg.com/originals/81/dc/01/81dc01b6f0756fdd5a80bd8343149480.png" width="200" alt="セーラームーン"></a>
+    <button type="button" class="navbar-toggler  navbar-light bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="ナビゲーションの切替">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home</a>
+        <a class="nav-item nav-link" href="#">News</a>
+        <a class="nav-item nav-link" href="#">Info</a>
+      </div>
     </div>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control my-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </nav>
   <div class="container">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
@@ -122,7 +117,7 @@
             <div class="row">
               <div v-for="item in items" class="col-md-4">
                 <div class="card mb-4 shadow-sm">
-                  <img :src="item.img_url" alt="item.img_alt" height="auto">
+                  <img class="card_img" :src="item.img_url" alt="item.img_alt">
                   <div class="card-body">
                       <p class="card-text">
                         <span v-html="item.name"></span>
