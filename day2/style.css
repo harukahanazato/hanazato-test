@@ -25,6 +25,11 @@
 .news {
     padding: 50px 0px;
 }
+.news_img {
+    width: 10%;
+    max-width: 10%;
+    min-width: 10px;
+}
 .Headline {
     font-size: x-large;
     color: #fc6586;
