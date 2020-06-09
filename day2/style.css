@@ -11,9 +11,7 @@
     width:100%;
 }
 .carousel-item {
-
     max-height: 600px;
-    min-height: 300px;
 }
 .carousel-item a {
     display: block;
@@ -52,7 +50,6 @@
 .card_img {
     height: 320px;
     max-height: 320px;
-    min-height: 80%;
 }
 .page-link {
     color: #fc6586;
