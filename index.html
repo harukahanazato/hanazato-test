@@ -3,51 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vueのテスト</title>
+    <title>美少女戦士セーラームーン</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<header>
-  <nav class="navbar navbar-expand-lg">
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a href="http://sailormoon-official.com/" target="_brank">
-        <img src="https://i.pinimg.com/originals/81/dc/01/81dc01b6f0756fdd5a80bd8343149480.png" width="200" alt="セーラームーン">
-      </a>
-      <ul class="navbar-nav mr-auto ml-4 mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">News</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Info</a>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control my-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</header>
 <body>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="http://sailormoon-official.com/" target="_brank"><img src="https://i.pinimg.com/originals/81/dc/01/81dc01b6f0756fdd5a80bd8343149480.png" width="200" alt="セーラームーン"></a>
+    <button type="button" class="navbar-toggler  navbar-light bg-light" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="ナビゲーションの切替">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home</a>
+        <a class="nav-item nav-link" href="#">News</a>
+        <a class="nav-item nav-link" href="#">Info</a>
+      </div>
+    </div>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control my-2 mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
   <div class="container">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <a href="">
-            <img :src="car_img1" class="d-block w-100" alt="sailormoon1">
+            <img :src="car_img1" class="car_img" alt="sailormoon1">
           </a>
         </div>
         <div class="carousel-item">
           <a href="">
-            <img :src="car_img2" class="d-block w-100" alt="sailormoon2">
+            <img :src="car_img2" class="car_img" alt="sailormoon2">
           </a>
         </div>
         <div class="carousel-item">
           <a href="">
-            <img :src="car_img3" class="d-block w-100" alt="sailormoon3">
+            <img :src="car_img3" class="car_img" alt="sailormoon3">
           </a>
         </div>
       </div>
@@ -78,7 +71,7 @@
           <li>4/24-4/30 「美少女戦士セーラームーン」第1話～第10話</li>
         </ul>
         <p><b>セーラームーンを観ない子は・・・</b>  
-          <img :src="img_url2" width="120" :alt="img_alt" data-toggle="modal" data-target="#staticBackdrop" type="button">
+          <img class="news_img" :src="img_url2" :alt="img_alt" data-toggle="modal" data-target="#staticBackdrop" type="button">
         ← クリックしてね</p>
       </div>
     </div>
@@ -122,9 +115,9 @@
         <div class="album">
           <div class="container">
             <div class="row">
-              <div v-for="item in items" class="col-md-4">
+              <div v-for="item in items" class="col-md-4 col-sd-8 col-xs-12">
                 <div class="card mb-4 shadow-sm">
-                  <img :src="item.img_url" alt="item.img_alt" width="338" height="338">
+                  <img class="card_img" :src="item.img_url" alt="item.img_alt">
                   <div class="card-body">
                       <p class="card-text">
                         <span v-html="item.name"></span>
@@ -299,7 +292,7 @@
             img_url2: 'https://stickershop.line-scdn.net/stickershop/v1/product/15497/LINEStorePC/main.png;compress=true',
             img_alt: '美少女戦士セーラームーン',
             car_img1: 'https://spice.eplus.jp/images/RNO0F3nVyuSZE1SNnvQIOJkRGoeY0xD6vNyNs5eEiOzHVOWcAOzgazIuAG7Iwzdj',
-            car_img2: 'https://i.imgur.com/n6qmv.jpg',
+            car_img2: 'https://i.pinimg.com/originals/a0/54/3e/a0543eef8942ee871c2d52073d68cf1d.jpg',
             car_img3: 'http://www.theotaku.com/submissions/temporary/wallpapers/captions/517562-20100324163027.jpg',
             show: true,
             massage: '',
@@ -347,7 +340,7 @@
           {
             console.log('Click!')
           }
-        }
+        },
     })
 </script>
 
